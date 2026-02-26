@@ -1,0 +1,32 @@
+---
+import { brandSettings } from '../scripts/brandSettings.js';
+---
+<aside class="sidebar">
+    <header class="sidebar-header">
+        <div class="brand">
+            {brandSettings.logo.src ? (
+                <img src={brandSettings.logo.src} alt={brandSettings.logo.alt} style="max-width: 150px; height: auto; margin-bottom: 1rem;" />
+            ) : (
+                <div class="placeholder-box logo-placeholder">
+                    [Brand Logo Image Placeholder]
+                </div>
+            )}
+            <h1 class="brand-title">Brand Guide</h1>
+        </div>
+
+    <button id="mobile-toc-toggle" class="mobile-toc-toggle" aria-label="Toggle Table of Contents" aria-expanded="false">
+        &#8942;
+    </button>
+    </header>
+
+    <nav id="site-navigation" class="toc-nav" aria-label="Table of Contents">
+        <strong>Table of Contents</strong>
+        <ul id="toc-list">
+            <!-- Links will be dynamically populated here by JavaScript -->
+        </ul>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+            <span class="theme-icon-light">☀ Light</span><span class="theme-icon-dark">☾ Dark</span>
+        </button>
+    </nav>
+</aside>

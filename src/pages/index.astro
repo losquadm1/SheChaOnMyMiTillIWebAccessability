@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Logo from '../components/sections/Logo.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Strategy from '../components/sections/Strategy.astro';
+import Typography from '../components/sections/Typography.astro';
+import Color from '../components/sections/Color.astro';
+import Imagery from '../components/sections/Imagery.astro';
+import DigitalUX from '../components/sections/DigitalUX.astro';
+import Voice from '../components/sections/Voice.astro';
+import Implementation from '../components/sections/Implementation.astro';
+---
+
+<Layout title="[Brand Name] - Inclusive Brand Guide">
+    <!-- Sidebar / Table of Contents -->
+    <Sidebar />
+
+    <div class="container">
+        <!-- Accessibility Skip Link -->
+
+        <main id="main-content">
+
+            <!-- Section 1: Logo -->
+            <Logo />
+
+            <!-- Section 2: Strategy -->
+            <Strategy />
+
+            <!-- Section 3: Voice & Tone -->
+            <Voice />
+
+            <!-- Section 4: Color & Contrast -->
+            <Color />
+
+            <!-- Section 5: Typography -->
+            <Typography />
+
+            <!-- After this point add a section or two that apply to our brand you can use imagery or UX if you'd like, 
+             but your brand may need other things instead or in addition such as video, social media, etc. -->
+
+            <!-- Optional Section: Imagery -->
+            <Imagery />
+
+            <!-- Optional Section: Digital UX -->
+            <DigitalUX />
+            
+            <!-- Optional Section: Documentation -->
+            <Implementation />
+
+        </main>
+    </div>
+</Layout>
+
+<script src="/src/scripts/main.js"></script>

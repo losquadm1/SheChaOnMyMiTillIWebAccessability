@@ -1,0 +1,96 @@
+---
+import InstructionNote from '../InstructionNote.astro';
+import ColorSwatch from '../ColorSwatch.astro';
+import { brandSettings } from '../../scripts/brandSettings.js';
+---
+<section id="color">
+                <h2>Colors</h2>
+                
+                <InstructionNote>
+                    Define your brand's primary and extended color palettes. Research and document the required WCAG contrast ratios for text and non-text UI elements, then verify your palette meets these standards.
+                </InstructionNote>
+
+                <h3>Brand Palette</h3>
+                <ColorSwatch />
+
+                <h3>Color Usage Policy</h3>
+                <p><strong>Use of Color:</strong> [Define your brand's policy on relying solely on color to convey meaning, state, or information (e.g., in error states or links). Assume your user is marketing and design team membrs who might not have any prior accessibility knowledge.]</p>
+
+                <h3>Text Contrast Playground</h3>
+                <p>[Define the minimum contrast ratio required for normal text vs. large text according to WCAG 2.1 AA, explain to users what the tool below helps them do and how they can use it]</p>
+                
+                <div id="contrast-calculator" class="contrast-calculator" data-palette={JSON.stringify(brandSettings.palette)}>
+                    <div class="calculator-controls">
+                        <div class="control-group">
+                            <label for="bg-color">Background Color</label>
+                            <select id="bg-color">
+                                <!-- Populated by JS -->
+                            </select>
+                        </div>
+                        <button id="swap-colors" class="swap-btn" aria-label="Swap background and text colors" title="Swap Colors">
+                            ⇄
+                        </button>
+                        <div class="control-group">
+                            <label for="text-color">Text Color</label>
+                            <select id="text-color">
+                                <!-- Populated by JS -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="preview-area" class="preview-area">
+                        <h4>Preview Text</h4>
+                        <p>The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+
+                    <div class="results">
+                        <p class="results-ratio"><strong>Contrast Ratio:</strong> <span id="ratio-display"></span></p>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Standard</th>
+                                    <th>Normal Text</th>
+                                    <th>Large Text (18pt+ / 14pt bold)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>WCAG AA</strong></td>
+                                    <td id="aa-normal"></td>
+                                    <td id="aa-large"></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>WCAG AAA</strong></td>
+                                    <td id="aaa-normal"></td>
+                                    <td id="aaa-large"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h3>Negative Examples</h3>
+                <p>The following examples illustrate color combinations that fail WCAG AA compliance due to insufficient contrast.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                    <div style="background-color: #ffffff; color: #cccccc; padding: 1.5rem; border: 1px solid #e0e0e0;">
+                        <h4 style="margin-top: 0; color: inherit;">Do Not Use</h4>
+                        <p style="margin-bottom: 0;">Light gray text on white background (Fails WCAG AA)</p>
+                    </div>
+                    <div style="background-color: #333333; color: #000000; padding: 1.5rem; border: 1px solid #e0e0e0;">
+                        <h4 style="margin-top: 0; color: inherit;">Do Not Use</h4>
+                        <p style="margin-bottom: 0;">Black text on dark gray background (Poor visibility)</p>
+                    </div>
+                </div>
+
+                <h3>Non-Text Contrast (UI Elements)</h3>
+                <p>[Define the minimum contrast ratio required for interactive components like buttons, input borders, and icons against their adjacent backgrounds.]</p>
+
+                <h3>Inline Links</h3>
+                <p>[Define the visual style for inline links to ensure they are clearly identifiable within content.]</p>
+                <ul>
+                    <li><strong>Text Decoration:</strong> [Specify if links are underlined. WCAG recommends underlines so links are distinguishable by more than just color.]</li>
+                    <li><strong>Color Contrast:</strong> [Ensure link color meets 4.5:1 contrast against the background.]</li>
+                    <li><strong>Hover & Focus:</strong> [Describe the visual change on interaction (e.g., darker shade, background highlight) to indicate interactivity.]</li>
+                </ul>
+            </section>
