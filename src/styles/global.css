@@ -75,7 +75,7 @@
 }
 
 body {
-    font-family: var(--font-primary, sans-serif);
+    font-family: var(, sans-serif);
     line-height: var(--line-height-base, 1.6);
     color: var(--text-color);
     background-color: var(--bg-color);

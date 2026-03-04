@@ -1,32 +1,32 @@
 export const brandSettings = {
     logo: {
-        src: "", // Add logo image URL here (e.g., "/assets/logo.png")
-        alt: "[Brand Name]",
+        src: "/public/images/LogoLogo.png", // Add logo image URL here (e.g., "/assets/logo.png")
+        alt: "Chami",
         variations: [ // you might have wordmarks / different color variants than what is listed here, that's fine just adjust it
             { 
                 name: "Primary - Light Background", 
-                src: "", // Add image path
+                src: "public/images/PurpleLogo.png", // Add image path
                 bg: "#ffffff", 
                 darkText: true,
                 description: "Use this version on white or light backgrounds."
             },
             { 
                 name: "Primary - Dark Background", 
-                src: "", // Add image path
+                src: "public/images/PurpleLogo.png", // Add image path
                 bg: "#333333", 
                 darkText: false,
                 description: "Use this version on dark or brand-colored backgrounds."
             },
             { 
                 name: "Monochrome - Black", 
-                src: "", // Add image path
+                src: "public/images/BlackLogo.png", // Add image path
                 bg: "#ffffff", 
                 darkText: true,
                 description: "For black and white print or single-color applications."
             },
             { 
                 name: "Monochrome - White", 
-                src: "", // Add image path
+                src: "public/images/WhiteLogo.png", // Add image path
                 bg: "#000000", 
                 darkText: false,
                 description: "For dark backgrounds where color is not permitted."
@@ -43,11 +43,11 @@ export const brandSettings = {
     },
     palette: [ // these will load automatically into your page into the color section
         { name: "White", hex: "#ffffff" },
-        { name: "Black", hex: "#000000" },
-        { name: "Primary Blue", hex: "#0056b3" },
-        { name: "Secondary Teal", hex: "#17a2b8" },
-        { name: "Accent Yellow", hex: "#ffc107" },
-        { name: "Dark Gray", hex: "#343a40" },
-        { name: "Light Gray", hex: "#f8f9fa" }
+        { name: "Dark Purple", hex: "#0d0024" },
+        { name: "Accent Purple", hex: "#1c0b35" },
+        { name: "Chami Purple", hex: "#7653a2" },
+        { name: "Read/Unselected Off-White", hex: "#A19FAD" },
+        { name: "Link Pink", hex: "#e2c8e1" },
+        { name: "Light Gray", hex: "#ed1f24" }
     ]
 };
