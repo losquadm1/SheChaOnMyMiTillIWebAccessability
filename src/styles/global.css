@@ -1,6 +1,15 @@
 /* * WIREFRAME BASE STYLES 
     * Students: Replace these styles with your brand's specific CSS.
     */
+
+@font-face{
+    font-family: "Satoshi-Variable";
+    src:
+    local("Satoshi-Variable")
+    url(public/images/Satoshi-Variable.ttf) format(ttf)
+}
+
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -31,14 +40,14 @@
 
 /* Dark Mode Overrides */
 [data-theme="dark"] {
-        --bg-color: #121212;
+        --bg-color: #ffffff;
         --text-color: #e0e0e0;
         --wireframe-border: #666666;
         --instruction-bg: #423602;
         --instruction-border: #6e5d14;
         --instruction-text: #ffeeba;
-        --container-bg: #1e1e1e;
-        --sidebar-bg: #1e1e1e;
+        --container-bg: #0d0024;
+        --sidebar-bg: #0d0024;
         --border-color: #444444;
         --border-light: #333333;
         --heading-color: #ffffff;
