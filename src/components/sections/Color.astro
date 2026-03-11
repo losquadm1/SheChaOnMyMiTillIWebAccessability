@@ -14,7 +14,7 @@ import { brandSettings } from '../../scripts/brandSettings.js';
                 <ColorSwatch />
 
                 <h3>Color Usage Policy</h3>
-                <p><strong>Use of Color:</strong> [Define your brand's policy on relying solely on color to convey meaning, state, or information (e.g., in error states or links). Assume your user is marketing and design team membrs who might not have any prior accessibility knowledge.]</p>
+                <p><strong>Use of Color:</strong> Chami strives to create an easy to understand user experience. While putting a striking red on a purple backdrop could help notify a user of an issue. Utilizing an image or symbol alongside the color is essential. Helping clarity visual clarity for anybody with visual impairments.</p>
 
                 <h3>Text Contrast Playground</h3>
                 <p>[Define the minimum contrast ratio required for normal text vs. large text according to WCAG 2.1 AA, explain to users what the tool below helps them do and how they can use it]</p>
@@ -84,13 +84,16 @@ import { brandSettings } from '../../scripts/brandSettings.js';
                 </div>
 
                 <h3>Non-Text Contrast (UI Elements)</h3>
-                <p>[Define the minimum contrast ratio required for interactive components like buttons, input borders, and icons against their adjacent backgrounds.]</p>
+                <p>Buttons should follow the WCAG AA guidelines similarly to text. Buttons with text on them are allowed to be a little more lenient, as long as the text is following WCAG guidelines.
+<br>
+Ex: Chami Purple on Dark Purple is okay. As long as a color such as white is on top of the Chami Purple.
+</p>
 
                 <h3>Inline Links</h3>
-                <p>[Define the visual style for inline links to ensure they are clearly identifiable within content.]</p>
+                <p>Links will use Link Pink in dark mode and Chami Purple in Light Mode. This ensures the 4.5:1 ratio needed for the WCAG AA Guidelines.</p>
                 <ul>
-                    <li><strong>Text Decoration:</strong> [Specify if links are underlined. WCAG recommends underlines so links are distinguishable by more than just color.]</li>
-                    <li><strong>Color Contrast:</strong> [Ensure link color meets 4.5:1 contrast against the background.]</li>
-                    <li><strong>Hover & Focus:</strong> [Describe the visual change on interaction (e.g., darker shade, background highlight) to indicate interactivity.]</li>
+                    <li><strong>Text Decoration:</strong> The primary use of text decoration is utilizing underlines for links.</li>
+                    <li><strong>Color Contrast:</strong> Ensure link color meets 4.5:1 contrast against the background.</li>
+                    <li><strong>Hover & Focus:</strong> Links will gain a boarder when hovered.</li>
                 </ul>
             </section>
