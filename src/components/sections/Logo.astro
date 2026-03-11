@@ -14,7 +14,7 @@ import InstructionNote from '../InstructionNote.astro';
             <div class="logo-card">
                 <div class="logo-preview" style={`background-color: ${variation.bg}; color: ${variation.darkText ? '#000' : '#fff'}`}>
                     {variation.src ? (
-                        <img src={variation.src} alt={`${brandSettings.logo.alt} - ${variation.name}`} />
+                        <img src={`${import.meta.env.BASE_URL}${variation.src.replace(/^\//, '')}`} alt={`${brandSettings.logo.alt} - ${variation.name}`} />
                     ) : (
                         <div class="placeholder-text">[Logo: {variation.name}]</div>
                     )}
