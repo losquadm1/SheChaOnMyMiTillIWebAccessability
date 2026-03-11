@@ -36,7 +36,7 @@ export const brandSettings = {
     favicon: "/favicon.svg", // Add favicon URL here
     typography: {
         primaryFont: "Satoshi",  // this will automatically get set as the page font
-        secondaryFont: "Archivo Black", // dont be a bum, go find some google/adobe fonts you like. just make sure to load them in the stylesheet or Layout astro file 
+        secondaryFont: "Archivo", // dont be a bum, go find some google/adobe fonts you like. just make sure to load them in the stylesheet or Layout astro file 
         baseSize: "16px",
         lineHeight: "1.5",
         paragraphSpacing: "2"

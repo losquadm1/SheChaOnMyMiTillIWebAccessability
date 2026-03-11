@@ -6,15 +6,10 @@
     font-family: "Satoshi-Variable";
     src:
     local("Satoshi-Variable")
-    url(public/images/Satoshi-Variable.ttf) format(ttf)
+    url(/images/Satoshi-Variable.ttf) format(ttf)
 }
 
-@font-face{
-    font-family: "ArchivoBlack-Regular";
-    src:
-    local("ArchivoBlack-Regular")
-    url(public/images/ArchivoBlack-Regular.ttf) format(ttf)
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -136,7 +131,8 @@ section {
 }
 
 h1, h2 {
-    font-family: "ArchivoBlack-Regular", sans-serif;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
     color: var(--heading-color, var(--color-black));
 }
 
